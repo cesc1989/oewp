@@ -1,6 +1,6 @@
 @charset "utf-8";
 /*Resetear*/
-html,body,div,span,img,strong,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th{
+html,body,div,span,img,strong,fieldset,form,label,aside,figure,legend,table,caption,tbody,tfoot,thead,tr,th{
 	margin:0;
 	padding:0;
 	border:0;
@@ -41,17 +41,37 @@ caption{
 }
 /*ESTRUCTURA*/
 #contenedor-cabeza{
-	height:140px;
+	height:110px;
 }
 #contenedor-pie{
-	height:120px;
+	height:100px;
 	color: #fff;
+}
+#slider{
+	height: 400px;
+	background-color: #fff;
+}
+#slider aside{
+	width: 350px;
+	display: inline-block;
+	float: left;
+	border: 1px solid red;
+}
+#slider figure{
+	display: inline-block;
+	float: right;
+	height: 370px;
+	border: 1px solid green;
+}
+#slider figure img{
+	width: 450px;
+	height: 340px;
 }
 #contenedor-cuerpo{
 	padding: 3px;
 	font-family: 'Arial','Helvetica','sans-serif' !important;
 	font-size:14px;
-	height:auto;
+	min-height:auto;
 	background-color: #fff;
 }
 #contenedor-cuerpo a{
@@ -85,7 +105,7 @@ caption{
 }
 nav{
 	float: right;
-	margin-top: 80px;
+	margin-top: 60px;
 	font-size: 18px;
 }
 nav ul.menu, ul.menu{
