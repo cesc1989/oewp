@@ -1,12 +1,15 @@
 @charset "utf-8";
 /*Resetear*/
-html,body,div,span,img,s,strong,u,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th{
+html,body,div,span,img,strong,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th{
 	margin:0;
 	padding:0;
 	border:0;
 	outline:0;
 	font-size:100%;
 	vertical-align:baseline;
+}
+body{
+	background-color: #000;
 }
 @font-face{
 	font-family:OR;
@@ -17,17 +20,14 @@ html,body,div,span,img,s,strong,u,fieldset,form,label,legend,table,caption,tbody
 	font-size:32px;
 	margin-top: 30px;
 	display: inline-block;
+	color: #fff;
+}
+a.logo:hover{
+	text-decoration: none;
 }
 /*HTML*/
 h1,h2,h3{
 	text-shadow:0 1px 2px rgba(0,0,0,0.5);
-}
-a{
-	color:#00007c;
-	text-decoration:none;
-}
-a:hover{
-	text-decoration:underline;
 }
 table,td,tr,th{
 	border:1px solid #000;
@@ -42,28 +42,50 @@ caption{
 /*ESTRUCTURA*/
 #contenedor-cabeza{
 	height:140px;
-	background-color:#3CB1E8;
-	border-bottom: 10px solid #000;
 }
 #contenedor-pie{
 	height:120px;
-	background-color:#3B88E5;
-	border-top: 5px solid #000;
+	color: #fff;
 }
 #contenedor-cuerpo{
-	background:-moz-linear-gradient(top, #FFF, #EDEDED);
-	background:-webkit-gradient(linear,left top,left bottom,from(#FFF),to(#EDEDED));
+	padding: 3px;
 	font-family: 'Arial','Helvetica','sans-serif' !important;
 	font-size:14px;
-	min-height:550px;
+	height:auto;
+	background-color: #fff;
+}
+#contenedor-cuerpo a{
+	color:#00007c;
+	text-decoration:none;
+}
+#contenedor-cuerpo a:hover{
+	text-decoration:underline;
 }
 .envoltura{
  	width:940px;
  	margin:0 auto;
 }
+/*OTROS*/
+.actual{
+	color: #000 !important;
+	text-decoration:none;
+	background-color:#fff;
+	padding:.5em;
+	-webkit-border-radius:6px;
+	-moz-border-radius:6px;
+	border-radius:6px;
+}
+.orden{
+	display:block;
+	margin:.5em 0 0 0;
+}
+#contenedor-cabeza a, #contenedor-pie a{
+	color: #fff;
+	text-decoration: none;
+}
 nav{
 	float: right;
-	margin-top: 100px;
+	margin-top: 80px;
 	font-size: 18px;
 }
 nav ul.menu, ul.menu{
@@ -75,8 +97,9 @@ nav ul.menu li, ul.menu li{
 	display:inline;
 }
 nav ul.menu li a:hover{
+	color:#000 !important;
+	background-color:#fff;
 	text-decoration:none;
-	background-color:#e7f9f4;
 	-webkit-transition:all .5s linear;
 	padding:.5em;
 	-webkit-border-radius:6px;
@@ -85,11 +108,14 @@ nav ul.menu li a:hover{
 	-o-transition:all .5s linear;
 	border-radius:6px;
 }
-ul.menu{
+#contenedor-pie ul.menu{
 	margin-top: 12px;
 }
-ul.menu li a:hover{
-	color:#0023ad;
+#contenedor-pie ul.menu li a{
+	color: #fff;
+}
+#contenedor-pie ul.menu li a:hover{
+	color:#ccc;
 }
 #contenedor-pie .envoltura > span{
 	float:right;
@@ -112,16 +138,4 @@ ul.menu li a:hover{
 	font-weight:bold;
 	color:#D64411;
 }
-/*OTROS*/
-.actual{
-	text-decoration:none;
-	background-color:#e7f9f4;
-	padding:.5em;
-	-webkit-border-radius:6px;
-	-moz-border-radius:6px;
-	border-radius:6px;
-}
-.orden{
-	display:block;
-	margin:.5em 0 0 0;
-}
+/*Cuadro para Internet Explorer*/
