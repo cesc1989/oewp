@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>My jQuery Mobile App</title>
+	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
+</head>
+<body>
+	<div data-role="page" data-theme="c">
+		<div data-role="header" data-theme="b" data-position="fixed">
+			<a href="#" data-role="none">derecha</a>
+			<a href="#">otro boton</a>
+			<h2>Posicionamiento</h2>
+		</div>
+		<div data-role="content">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris. Maecenas congue ligula ac quam viverra nec consectetur ante hendrerit. Donec et ment elit lacus, vestibulum at malesuada et, ornare et est. Ut augue nunc, sodales ut euismod non, adipiscing vitae orci. Mauris ut placerat justo. Mauris in ultricies enim. Quisque nec est eleifend nulla ultrices egestas quis ut quam. Donec sollicitudin lectus a mauris pulvinar id aliquam urna cursus. Cras quis ligula sem, vel elementum mi. Phasellus non ullamcorper urna.</p>
+			<a href="index.html" data-role="button" data-transition="fade">Ir a la pagina principal</a>
+			<h3>para ir a la pagina 2</h3>
+			<a href="index.html#pag_2" data-role="button" data-transition="pop">Ir a la pagina 2</a>
+			<!--LISTVIEW-->
+			<h3>Lista 1</h3>
+			<ul data-role="listview" data-filter="true" data-filter-placeholder="Buscar" data-inset="true">
+				<li><a href="#">comida</a></li>
+				<li>ropa</li>
+				<li>animales
+					<ul>
+						<li>gatos</li>
+						<li>perros</li>
+					</ul>
+				</li>
+				<li>masas</li>
+				<li>deportes</li>
+			</ul>
+			<h3>Lista 2</h3>
+			<ul data-role="listview" data-inset="true">
+				<li>Item 1</li>
+				<li>item 2</li>
+				<li>item 3</li>
+				<li>item 4</li>
+				<li>item 5</li>
+			</ul>
+		</div>
+		<div data-role="footer" data-theme="b">
+			Pie de pagina
+		</div>
+	</div>
+</body>
+</html>

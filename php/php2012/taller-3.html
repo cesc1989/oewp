@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+	<title>PHP 2012 - Francisco Quintero || Taller 3</title>
+	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
+	<link rel="stylesheet" href="reset.css" type="text/css" />
+</head>
+<body>
+	<div id="contenedor-cabeza">
+	<header class="envoltura">
+		<h1><a href="index.html" title="Inicio">PHP: clase 2012</a></h1>
+	</header>
+	</div>
+	<div id="contenedor-cuerpo">
+	<section class="envoltura">
+		<h1>Ejercicios con la variable $_GET</h1>
+		<div><h2>Opcional</h2>
+			<form name="actividad-get" action="multi-nombre.php" method="get">
+				<input type="text" name="nombre" placeholder="Nombre" maxlength="20" size="22" required autocomplete="off" />
+				<input type="text" name="veces" placeholder="Veces" maxlength="2" size="6" required autocomplete="off" />
+				<input type="submit" value="Multiplicar" />
+			</form>
+		</div>
+		<div>
+			<h2>Taller 3 _GET</h2>
+			<form name="acti-get" action="t3.php" method="get">
+				<label for="filas">N&uacute;mero de filas</label>
+				<input type="text" name="filas" placeholder="Filas" maxlength="2" size="3" required autocomplete="off" />
+				<input type="submit" value="Crear" />
+			</form>
+		</div>
+		<br />
+		<a href="javascript:history.back();">Volver</a>
+	</section>
+	</div>
+	<div id="contenedor-pie">
+		<footer class="envoltura">
+		</footer>
+	</div>
+</body>
+</html>

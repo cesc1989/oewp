@@ -1,0 +1,9 @@
+<html>
+<?php
+		echo "<head><meta http-equiv='REFRESH' content='0;url=principal.php'></head>";
+	?>
+<body>
+	<p>HOla mundo</p>
+</body>
+
+</html>

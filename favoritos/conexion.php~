@@ -1,0 +1,96 @@
+<?php
+echo "Tabla de logs";
+//CREAR TABLA FAVORITOS
+	//conexion a la base de datos
+	$conexion = sqlite_open('favoritos.db') or die('Error al conectar');
+	//crear tabla
+	$consulta = <<SQL
+		CREATE TABLE favoritos(
+			usuario Char(40) Not Null,
+			contrasena Char(40) Not Null,
+			titulo Char(40) Not Null,
+			direccion Char(100) Not Null,
+			categoria Char(40),
+			comentario Char(200),
+			valoracion Int
+			);
+	SQL;
+	//insertar contenido en la tabla
+	$resultado = sqlite_exec($conexion,$consulta);
+	//cerrar la conexion
+	sqlite_close($conexion);
+	//CONTENIDO DE PRUEBA------------------------------------
+	//establecer
+		$conexion = sqlite_open('favoritos.db') or die('Error al conectar');
+	//preparar
+		$consulta = <<SQL
+			INSERT INTO favoritos VALUES('jocarsa','jocarsa','google','www.google.com','tecnologia','buscador google',5);
+		SQL;
+	//insertar
+		$resultado = sqlite_exec($conexion,$consulta);
+	//cerar
+		sqlite_close($conexion);
+//CREAR TABLA DE USUARIOS
+	//conexion
+	$conexion = sqlite_open('favoritos.db') or die('Error al conectarse');
+	//crear tabla
+	$consulta = <<SQL
+		CREATE TABLE usuarios(
+			usuario Char(40) Not Null,
+			contrasena Char(40) Not Null,
+			nombre Char(40) Not Null,
+			apellido Char(100) Not Null,
+			edad Int,
+			permisos Int
+			);
+	SQL;
+	//insertar
+	$resultado = sqlite_exec($conexion,$consulta);
+	//cerrar conexion
+	sqlite_close($conexion);
+	//CONTENIDO DE PRUEBA------------------------------------
+	//establecer
+		$conexion = sqlite_open('favoritos.db') or die('Error al conectar');
+	//preparar
+		$consulta = <<SQL
+			INSERT INTO usuarios VALUES('jocarsa','jocarsa','Jose','Carracal',22,1);
+		SQL;
+	//insertar
+		$resultado = sqlite_exec($conexion,$consulta);
+	//cerar
+		sqlite_close($conexion);
+//CREAR TABLA DE LOGS
+	//conexion
+		$conexion = sqlite_open('favoritos.db') or die('No pudo conectar');
+	//crear tabla
+		$consulta = <<SQL
+			CREATE TABLE logs(
+				utc Int,
+				anio Int,
+				mes Int,
+				dia Int,
+				hora Int,
+				min Int,
+				seg Int,
+				ip Char(50),
+				navegador Char(200),
+				usuario Char(50),
+				contrasena Char(40)
+				);
+		SQL;
+	//insertar
+		$resultado = sqlite_exec($conexion,$consulta);
+	//cerar conexion
+		sqlite_close($conexion);
+	//CONTENIDO DE PRUEBA-----------------------------------
+	//establecer
+		$conexion = sqlite_open('favoritos.db') or die('No pudo conectar');
+	//preparar
+		$consulta = <<SQL 
+			INSERT INTO logs VALUES(000000000,2013,02,22,22,20,50,'192.127.89.0','qupzilla','jocarsa','jocarsa');
+		SQL;
+	//insertar
+		$resultado = sqlite_exec($conexion,$consulta);
+	//cerrar
+		sqlite_close($conexion);
+?>
