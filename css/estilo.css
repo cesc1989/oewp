@@ -56,16 +56,20 @@ caption{
 	display: inline-block;
 	float: left;
 	border: 1px solid red;
+	margin-left: 19px;
+	margin-top: 40px;
 }
 #slider figure{
 	display: inline-block;
 	float: right;
-	height: 370px;
+	height: 390px;
 	border: 1px solid green;
+	margin-right: 15px;
+	margin-top: 10px;
 }
 #slider figure img{
-	width: 450px;
-	height: 340px;
+	width: 520px;
+	height: 390px;
 }
 #contenedor-cuerpo{
 	padding: 3px;

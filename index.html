@@ -10,6 +10,7 @@
 	<meta name="robots" content="follow" />
 	<link rel="shortcut icon" href="imagenes/favicon.ico" />
 	<link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 	<!--Google Analytics-->
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
@@ -43,11 +44,33 @@
 	</div>
 	<div id="slider">
 		<div class="envoltura">
-			<figure><img src="imagenes/programacion.png" /></figure>
+			<figure>
+				<img id="img" src="imagenes/programacion.png" />
+				<img id="img_1" src="imagenes/nyan.jpg" />
+				<img id="img_2" src="imagenes/casete.jpg" />
+				<img id="img_3" src="imagenes/party.jpg" />
+			</figure>
 			<aside>
-				<h2>Probando c&oacute;digo</h2>
-				<p>Demostraciones de c&oacute;digo en varios lenguajes de programaci&oacute;n</p>
-				<a href="#">Ver algunas demostraciones</a>
+				<div id="item">
+					<h2>Probando c&oacute;digo</h2>
+					<p>Demostraciones de c&oacute;digo en varios lenguajes de programaci&oacute;n</p>
+					<a href="#">Ver algunas demostraciones</a>
+				</div>
+				<div id="item_1">
+					<h2>Pruebas con PHP y MySQL</h2>
+					<p>Demostraciones de c&oacute;digo usando php y base de datos mysql</p>
+					<a href="#">Ver algunas demostraciones</a>
+				</div>
+				<div id="item_2">
+					<h2>Probando hmtl5</h2>
+					<p>Demostraciones de c&oacute;digo con html5</p>
+					<a href="#">Ver algunas demostraciones</a>
+				</div>
+				<div id="item_3">
+					<h2>Probando jquery</h2>
+					<p>Demostraciones de c&oacute;digo jquery</p>
+					<a href="#">Ver algunas demostraciones</a>
+				</div>
 			</aside>
 		</div>
 	</div>
@@ -75,5 +98,48 @@
 <script type="text/javascript" src="js/cufon-yui.js"></script>
 <script type="text/javascript" src="js/cufon-replace.js"></script>
 <script type="text/javascript" src="js/Bascula_400.font.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$("#item_1").hide();
+		$("#item_2").hide();
+		$("#item_3").hide();
+		$("#img_1").hide();
+		$("#img_2").hide();
+		$("#img_3").hide();
+
+		$(window).load(function(){
+			animated_asides();
+			animated_images();			
+		});
+
+		function animated_asides(){
+			$("#item").fadeOut(3000,function(){
+				$("#item_1").fadeIn(3000).delay(2800).slideUp(3000,function(){
+					$("#item_2").slideDown(3000).delay(2800).fadeOut(3000,function(){
+						$("#item_3").fadeIn(3000).delay(2800).slideUp(3000,function(){
+							$("#item").slideDown(3000,function(){
+								animated_asides();
+							});
+						});
+					});
+				});
+			});
+		}
+		function animated_images(){
+			$("#img").slideUp(3000,function(){
+				$("#img_1").slideDown(3000).delay(2800).fadeOut(3000,function(){
+					$("#img_2").fadeIn(3000).delay(2800).slideUp(3000,function(){
+						$("#img_3").slideDown(3000).delay(2800).fadeOut(3000,function(){
+							$("#img").fadeIn(3000,function(){
+								animated_images();
+							});
+						});
+					});
+				});
+			});
+		}
+	});
+</script>
 </body>
 </html>
