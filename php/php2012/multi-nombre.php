@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
 	<title>PHP 2012 - Francisco Quintero || Taller 3</title>
-	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" href="reset.css" type="text/css" />
+	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" href="estilo-taller3.css" type="text/css" media="screen" />
 </head>
 <body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
 	<title>PHP 2012 - Francisco Quintero || Tabla generada</title>
-	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" href="reset.css" type="text/css" />
+	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 </head>
 <body>
 	<div id="contenedor-cabeza">

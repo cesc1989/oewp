@@ -159,4 +159,20 @@ nav ul.menu li a:hover{
 	font-weight:bold;
 	color:#D64411;
 }
-/*Cuadro para Internet Explorer*/
+/*Cajas box model*/
+.caja{
+	display:-webkit-box;
+	display:-moz-box;
+	display:-o-box;
+	display:box;
+}
+.caja_1{
+	-webkit-box-flex:1;
+	-moz-box-flex:1;
+	box-flex:1;
+}
+.caja_2{
+	-webkit-box-flex:2;
+	-moz-box-flex:2;
+	box-flex:2;
+}

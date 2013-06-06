@@ -2,8 +2,8 @@
 <?php include_once("conexion_principal.php"); ?>
 <head>
 	<title>PHP 2012 - Francisco Quintero || Administraci&oacute;n de asignaturas</title>
-	<link rel="stylesheet" href="../estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" href="../reset.css" type="text/css" />
+	<link rel="stylesheet" href="../estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="../buttons.css" media="screen" />
 </head>
 <body>

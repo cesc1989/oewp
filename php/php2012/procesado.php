@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <head>
 	<title>PHP 2012 - Francisco Quintero || Taller IF - procesado</title>
-	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" href="reset.css" type="text/css" />
+	<link rel="stylesheet" href="estilo-sitio.css" type="text/css" />
 	<link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
 </head>
 <body>
