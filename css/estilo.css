@@ -15,17 +15,6 @@ body{
 	font-family:OR;
 	src:url(../fuentes/OR.ttf);
 }
-.logo{
-	font-family:OR;
-	font-size:32px;
-	margin-top: 30px;
-	display: inline-block;
-	color: #fff;
-}
-a.logo:hover{
-	text-decoration: none;
-}
-/*HTML*/
 h1,h2,h3{
 	text-shadow:0 1px 2px rgba(0,0,0,0.5);
 }
@@ -37,9 +26,13 @@ table{
 	border-collapse:collapse;
 }
 caption{
-	font:20px Arial bold;
+	font:20px 'Arial' bold;
 }
 /*ESTRUCTURA*/
+.envoltura{
+ 	width:940px;
+ 	margin:0 auto;
+}
 #contenedor-cabeza{
 	height:110px;
 }
@@ -55,7 +48,6 @@ caption{
 	width: 350px;
 	display: inline-block;
 	float: left;
-	border: 1px solid red;
 	margin-left: 19px;
 	margin-top: 40px;
 }
@@ -63,7 +55,6 @@ caption{
 	display: inline-block;
 	float: right;
 	height: 390px;
-	border: 1px solid green;
 	margin-right: 15px;
 	margin-top: 10px;
 }
@@ -85,9 +76,21 @@ caption{
 #contenedor-cuerpo a:hover{
 	text-decoration:underline;
 }
-.envoltura{
- 	width:940px;
- 	margin:0 auto;
+#contenedor-cabeza a, #contenedor-pie a{
+	color: #fff;
+	text-decoration: none;
+}
+#contenedor-pie ul.menu{
+	margin-top: 12px;
+}
+#contenedor-pie ul.menu li a{
+	color: #fff;
+}
+#contenedor-pie ul.menu li a:hover{
+	color:#ccc;
+}
+#contenedor-pie .envoltura > span{
+	float:right;
 }
 /*OTROS*/
 .actual{
@@ -103,8 +106,14 @@ caption{
 	display:block;
 	margin:.5em 0 0 0;
 }
-#contenedor-cabeza a, #contenedor-pie a{
+.logo{
+	font-family:OR;
+	font-size:32px;
+	margin-top: 30px;
+	display: inline-block;
 	color: #fff;
+}
+a.logo:hover{
 	text-decoration: none;
 }
 nav{
@@ -131,18 +140,6 @@ nav ul.menu li a:hover{
 	-moz-transition:all .5s linear;
 	-o-transition:all .5s linear;
 	border-radius:6px;
-}
-#contenedor-pie ul.menu{
-	margin-top: 12px;
-}
-#contenedor-pie ul.menu li a{
-	color: #fff;
-}
-#contenedor-pie ul.menu li a:hover{
-	color:#ccc;
-}
-#contenedor-pie .envoltura > span{
-	float:right;
 }
 /*Cuadro para Internet Explorer*/
 #usuarios-ie{
