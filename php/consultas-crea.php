@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../imagenes/favicon.ico" />
 <link rel="stylesheet" type="text/css" media="screen" href="../css/estilo.css" />
+<link rel="stylesheet" type="text/css" href="../css/buttons.css">
 <script type="text/javascript" src="../js/mostrar-ocultar.js"></script>
 <title>Otro Espacio Web Practicas || PHP - Elecci&oacute;n de tarea</title>
 </head>
@@ -33,7 +34,8 @@
 				<form name="seleccion">
 					Consulta de registros <input type="button" value="Mostrar/Ocultar" onclick="muestraOculta('1');consultas[0].focus();" />
 					Ingrese nuevos datos <input type="button" value="Mostrar/Ocultar" onclick="muestraOculta('2');registros[0].focus();" />
-					<br /><br /><a href="index.html">Volver</a>
+					<br /><br />
+					<a href="index.html" class="button glass">Volver</a>
 				</form>
 			</fieldset>
 			<form style="display:none;" id="formu_1" name="consultas" action="muestra-datos-2.php" method="get">

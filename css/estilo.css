@@ -23,6 +23,7 @@ table,td,tr,th{
 	padding:.2em;
 }
 table{
+	margin-left: 25%;
 	border-collapse:collapse;
 }
 caption{
@@ -198,4 +199,29 @@ nav ul.menu li a:hover{
 	-webkit-box-flex:2;
 	-moz-box-flex:2;
 	box-flex:2;
+}
+#visor{
+	height: 100px;
+}
+#micanvas{
+	margin-left: 25%;
+	display: block;
+}
+.prezi-player{
+	width: 550px;
+	margin-left: 15%;
+}
+.prezi-player-links{
+	text-align: center;
+}
+#yo{
+	/*height: 140px;*/
+}
+#blogs{
+	height: 360px;
+}
+figure img{
+	width: 310px;
+	height: 160px;
+	box-shadow: 1px 2px 4px rgba(0,0,0,1);
 }

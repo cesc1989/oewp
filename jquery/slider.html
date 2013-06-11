@@ -1,0 +1,62 @@
+<script type="text/javascript" src="jquery-1.10.0.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
+<style type="text/css">
+	
+	#video_gallery{
+		width: 650px;
+		height: 410px;
+		margin: 60px auto;
+	}
+	.video_item, img{
+		width: 510px;
+		height: 400px;
+	}
+</style>
+<div id="video_gallery">
+	<a href="#" id="move_left">izquierda</a> <a href="#" id="move_right">derecha</a>
+	<div class="video_item_0">item 0<img src="thumbnail_0.png" /></div>
+	<div class="video_item_1">item 1<img src="thumbnail_1.png" /></div>
+	<div class="video_item_2">item 2<img src="thumbnail_2.png" /></div>
+	<div class="video_item_3">item 3<img src="thumbnail_0.png" /></div>
+	<div class="video_item_4">item 4<img src="thumbnail_1.png" /></div>
+	<div class="video_item_5">item 5<img src="thumbnail_2.png" /></div>
+	<div class="video_item_6">item 6<img src="thumbnail_0.png" /></div>
+</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(".video_item_1").hide();
+		$(".video_item_2").hide();
+		$(".video_item_3").hide();
+		$(".video_item_4").hide();
+		$(".video_item_5").hide();
+		$(".video_item_6").hide();
+
+		var contadora = 0;
+
+		$("#move_left").click(function(){
+			if(contadora!=6){
+				$(".video_item_"+contadora).hide();
+				contadora++;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}else{
+				$(".video_item_"+contadora).hide();
+				contadora = 0;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}
+		});
+
+		$("#move_right").click(function(){
+			if(contadora!=0){
+				$(".video_item_"+contadora).hide();
+				contadora--;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}else{
+				$(".video_item_"+contadora).hide();
+				contadora = 6;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}
+		});
+
+	});
+</script>

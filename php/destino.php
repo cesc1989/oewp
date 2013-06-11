@@ -42,7 +42,8 @@
 		<div class="envoltura">
 			<h1>Visor de imagenes.</h1>
 			<p>A continuacion podras ver una serie de imagenes usando los botones de navegacion.</p>
-			<?php 
+			<div id="visor">
+				<?php 
 				if(!ISSET($_GET["numero"]))
 					$x=2;
 				else
@@ -55,10 +56,9 @@
 				if($x!=14)
 					echo "<a class='boton' href='destino.php?numero=".$x."'>Siguiente</a>";
 				echo "<img src='../imagenes/antivirus".$x.".png' />";
-			?>
-			<br />
-			<br />
-			<a class="boton" href="index.html">regresar</a>
+				?>
+				<a class="boton" href="index.html">regresar</a>
+			</div>
 		</div>
 	</div>
 	<div id="contenedor-pie">

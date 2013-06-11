@@ -4,6 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <link rel="shortcut icon" href="../imagenes/favicon.ico" />
 <link rel="stylesheet" href="../css/estilo.css" media="screen" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css/buttons.css" />
 <title>Otro Espacio Web Practicas || PHP - Lista de registros</title>
 </head>
 <body>
@@ -31,23 +32,22 @@
 			$Recordset=mysql_query($query,$cone);
 			if(!$Recordset)
 				die("Consulta invalida: ".mysql_error());
-			if(mysql_num_rows($Recordset)==0)
-			{
+			if(mysql_num_rows($Recordset)==0){
 				echo"No se han encontrado filas dentro de la tabla.";
 				exit;
-			}?>
+			}
+		?>
 		<div class="envoltura">
-				<table summary="Tabla de registros">
-					<caption>Registros actuales</caption>
-					<tr>
-					<th>Codigo</th>
-					<th>Nombres</th>
-					<th>Apellidos</th>
-					</tr>
-					<tr>
+			<h1>Tabla de los Registros Actuales</h1>
+			<table summary="Tabla de registros">
+				<tr>
+				<th>Codigo</th>
+				<th>Nombres</th>
+				<th>Apellidos</th>
+				</tr>
+				<tr>
 				<?php
-					while($fila=mysql_fetch_assoc($Recordset))
-					{
+					while($fila=mysql_fetch_assoc($Recordset)){
 						echo"<td>";
 						echo"<a href=muestra-datos.php?Codigo=".$fila['Codigo'].">".$fila['Codigo']."</a>";
 						echo"</td>";
@@ -61,12 +61,12 @@
 					}
 					mysql_free_result($Recordset);
 					mysql_close($cone);
-					?>
-					<td colspan='3'>
+				?>
+				<td colspan='3'>
 					<a href='insertar.php' title='Crear nuevo'>Nuevo</a>
-					</td>
-					</table>
-					<a href=index.html title=Atras>Volver</a>
+				</td>
+			</table>
+			<a href="index.html" class="button glossy" title="Atras">Volver</a>
 		</div>
 	</div>
 	<div id="contenedor-pie">
