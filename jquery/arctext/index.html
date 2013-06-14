@@ -1,0 +1,23 @@
+<script type="text/javascript" src="jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="jquery/jquery.arctext.js"></script>
+<script type="text/javascript" src="jquery/jsapi.js"></script>
+<script type="text/javascript">			
+			var $example1	= $('.logo').hide();			
+			google.load('webfont','1');			
+			google.setOnLoadCallback(function() {
+				WebFont.load({
+					google		: {
+						families	: ['Montserrat','Concert One']
+					},
+					fontactive	: function(fontFamily, fontDescription) {
+						init();
+					},
+					fontinactive	: function(fontFamily, fontDescription) {
+						init();
+					}
+				});
+			});			
+			function init() {				
+				$example1.show().arctext({radius: 900});			
+			};
+</script>

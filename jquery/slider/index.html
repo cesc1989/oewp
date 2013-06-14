@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<head>
+<title>Otro Espacio Web Practicas || jQuery</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/estilo.css" />
+<link rel="stylesheet" type="text/css" href="../../css/buttons.css" />
+<script type="text/javascript" src="jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.10.3.custom.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		//oculto los elementos que contienen cada item del slider
+		$(".video_item_1").hide();
+		$(".video_item_2").hide();
+		$(".video_item_3").hide();
+		$(".video_item_4").hide();
+		$(".video_item_5").hide();
+		$(".video_item_6").hide();
+		//variable contadora para usar con el numeral del item para desplazarlo
+		var contadora = 0;
+		//todo lo referente a mover incrementando
+		$("#move_left").click(function(){
+			if(contadora!=6){
+				$(".video_item_"+contadora).hide();
+				contadora++;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}else{
+				$(".video_item_"+contadora).hide();
+				contadora = 0;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}
+		});
+		//todo lo referente a mover decrementando
+		$("#move_right").click(function(){
+			if(contadora!=0){
+				$(".video_item_"+contadora).hide();
+				contadora--;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}else{
+				$(".video_item_"+contadora).hide();
+				contadora = 6;
+				$(".video_item_"+contadora).effect("slide",1000);
+			}
+		});
+	});
+</script>
+<style type="text/css">
+	#video_gallery{
+		width: 650px;
+		margin-left: 20%;
+	}
+	.video_item, img{
+		width: 510px;
+		height: 400px;
+	}
+	span{
+		display: block;
+		margin-left: 35%;
+	}
+</style>
+</head>
+<body>
+	<div id="contenedor-cabeza">
+		<div class="envoltura">
+			<a class="logo" href="../../" title="Inicio">Otro Espacio Web Practicas</a>
+			<nav>
+				<ul class="menu">
+					<li><a href="../../" title="Inicio">Inicio</a></li>
+					<li><a href="../../php/" title="PHP/MySQL">PHP/MySQL</a></li>
+					<li><a href="../../html5/" title="HTML5">HTML5</a></li>
+					<li><a class="actual" href="../" title="jQuery">jQuery</a></li>
+					<li><a href="../../prezi/" title="Prezi">Prezi</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="contenedor-cuerpo">
+		<div class="envoltura">
+			<h1>Slider</h1>
+			<p>Usando los efectos de <strong>jQuery UI</strong>, he creado un Slider para presentar imágenes, vídeos o texto cualquiera. Se mueve a la izquierda o a la derecha.</p>
+			<div id="video_gallery">
+				<a href="#" id="move_left">Izquierda</a> <a href="#" id="move_right">Derecha</a>
+				<div class="video_item_0"><img src="thumbnail_0.jpg" /><span>item 0<span></div>
+				<div class="video_item_1"><img src="thumbnail_1.jpg" /><span>item 1<span></div>
+				<div class="video_item_2"><img src="thumbnail_2.jpg" /><span>item 2<span></div>
+				<div class="video_item_3"><img src="thumbnail_3.jpg" /><span>item 3<span></div>
+				<div class="video_item_4"><img src="thumbnail_4.jpg" /><span>item 4<span></div>
+				<div class="video_item_5"><img src="thumbnail_5.jpg" /><span>item 5<span></div>
+				<div class="video_item_6"><img src="thumbnail_6.jpg" /><span>item 6<span></div>
+			</div>
+			<a href="../" class="button glossy orange">Regresar</a>
+		</div>
+	</div>
+	<div id="contenedor-pie">
+		<div class="envoltura">
+			<span>&copy;Otro Espacio Web Practicas.</span>
+			<ul class="menu">
+				<li><a href="../../contacto.html" title="Contacto">Contacto</a></li>
+				<li><a href="../../desarrolladores.html" title="Creador">Creador</a></li>
+				<li><a href="../../mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../../js/cufon-yui.js"></script>
+<script type="text/javascript" src="../../js/cufon-replace.js"></script>
+<script type="text/javascript" src="../../js/Bascula_400.font.js"></script>
+</html>

@@ -21,7 +21,7 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with AutoEmbed.  If not, see <http://www.gnu.org/licenses/>.
  */
-/**
+/*
   Example:
   array(
     'title'        =>  Source the embeded media comes from
