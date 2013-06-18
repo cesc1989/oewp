@@ -3,67 +3,69 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
-	<title>My jQuery Mobile App</title>
+	<title>My jQuery Mobile App - Testing</title>
 	<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="jquery.mobile-1.3.0/jquery.mobile-1.3.0.min.css" />
 </head>
 <body>
 	<div data-role="page" data-theme="c" id="inicio">
-		<div data-role="header" data-theme="b">
-			<h2>Inicio</h2>
+		<div data-role="header" data-theme="a">
+			<h2>Testeo a jQuery Mobile</h2>
 		</div>
 		<div data-role="content">
-			<p>Parrafo</p>
+			<p>jQuery Mobile es un framework basado en jQuery, para hacer aplicaciones web. Todo lo acontinuación es una prueba informal.</p>
+			<p>Botones</p>
 			<div class="ui-grid-a">
 				<div class="ui-block-a">
-					<a href="#" data-role="button" data-theme="a">Aceptar</a>
+					<a href="../" rel="external" data-role="button" data-theme="a">Volver a Prácticas OEW</a>
 				</div>
 				<div class="ui-block-b">
-					<a href="#confirmar" data-role="button" data-theme="d" data-rel="dialog">Borrar</a>
+					<a href="#confirmar" data-role="button" data-theme="d" data-rel="dialog">Cuadro de diálogo</a>
 				</div>
 			</div>
-			<h3>Botones en linea</h3>
+			<h3>Botones en línea</h3>
+			<p>Son botones que no ocupan todo el ancho de la pantalla</p>
 			<a href="formulario.html" data-role="button" data-inline="true">Formulario</a>
 			<a href="#" data-role="button" data-inline="true">No</a>
 			<a href="colapsable.html" data-role="button" data-inline="true">Colapsable</a>
-			<h3>para ir a la pagina 2</h3>
+			<h3>Para ir a la página 2 de prueba</h3>
 			<a href="#pag_2" data-role="button" data-transition="slideup">Ir a la pagina 2</a>
-			<h3>Ir a la pagian externa</h3>
+			<h3>Ir a una página externa de prueba</h3>
 			<a href="externa.html" data-role="button" data-transition="slideup">Ir a la pagina externa</a>
-			<h3>ir a pagina confirmar</h3>
-			<a href="confirmar.html" data-role="button">ir a confirmar</a>
+			<h3>Ir a otra página de prueba</h3>
+			<a href="confirmar.html" data-role="button">Ir a la otra página</a>
 		</div>
-		<div data-role="footer" data-theme="b">
-			Pie de pagina
+		<div data-role="footer" data-theme="a">
+			<p>Pie de página</p>
 		</div>
 	</div>
 
 	<div data-role="page" id="pag_2" data-theme="d">
 		<div data-role="header">
-			<h2>pagina 2</h2>
+			<h2>Segunda página de prueba</h2>
 			<div data-role="navbar">
 				<ul>
-					<li><a href="#" class="ui-btn-active">priemro</a></li>
-					<li><a href="#">seungod</a></li>
-					<li><a href="#">tercero</a></li>
-					<li><a href="#">cuarto</a></li>
-					<li><a href="#">quinto</a></li>
+					<li><a href="#" class="ui-btn-active">Primero</a></li>
+					<li><a href="#">Segundo</a></li>
+					<li><a href="#">Tercero</a></li>
+					<li><a href="#">Cuarto</a></li>
+					<li><a href="#">Quinto</a></li>
 				</ul>
 			</div>
 		</div>
 		<div data-role="content">
-			<p>Link absoluto que no se carga por ajax, ejemplo para una pagina que no es de nuestra aplicaicon, lo hacemos con el rel="external" en el enlace</p>
+			<p>Link absoluto que no se carga por ajax, ejemplo para una página que no es de nuestra aplicación, lo hacemos con el rel="external" en el enlace</p>
 			<a href="http://blogcongracia.blogspot.com" rel="external">Enlace absoluto</a>
-			<p>parrafo de la pagina dos</p>
-			<a href="#inicio" data-rel="back">Atras</a>
+			<p>Párrafo de la página dos</p>
+			<a href="#inicio" data-rel="back">Atrás</a>
 		</div>
 		<div data-role="footer" class="ui-bar">
 			<div data-role="controlgroup" data-type="horizontal">
-				<a href="#" data-icon="gear">productos</a>
-				<a href="#" data-icon="plus">refrescar</a>
-				<a href="#">compras</a>
-				<a href="#">reviews</a>
+				<a href="#" data-icon="gear">Productos</a>
+				<a href="#" data-icon="plus">Agregar</a>
+				<a href="#">Compras</a>
+				<a href="#">Reviews</a>
 			</div>
 		</div>
 	</div>
@@ -73,11 +75,11 @@
 			<h2>Eliminar</h2>
 		</div>
 		<div data-role="content">
-			<a href="#inicio" data-role="button" data-direction="reverse">Si lo hago</a>
-			<a href="#inicio" data-role="button" data-direction="reverse">No lo hago</a>
+			<a href="#inicio" data-role="button" data-direction="reverse">Sí, sí lo hago</a>
+			<a href="#inicio" data-role="button" data-direction="reverse">No, no lo hago</a>
 		</div>
 		<div data-role="footer">
-			Pie de pagina
+			<p>Pie de página</p>
 		</div>
 	</div>
 </body>
