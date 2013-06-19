@@ -47,6 +47,9 @@ if($contador == 0){
 	}
 }else{
 	echo "Nombre de usuario existente. Cambialo, por favor";
+	echo "<head>
+				<meta http-equiv='REFRESH' content='3;url=gestiondeusuarios.php'>
+			</head>";
 }
 mysql_close($conexion);
 
