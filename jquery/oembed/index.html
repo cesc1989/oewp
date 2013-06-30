@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Otro Espacio Web Practicas || jQuery</title>
+<meta charset="utf-8" />
+<link rel="stylesheet" type="text/css" href="../../css/estilo.css" />
+<link rel="stylesheet" type="text/css" href="../../css/buttons.css" />
+<script type="text/javascript" src="../jquery.min.js"></script>
+<script type="text/javascript" src="jquery.oembed.js"></script>
+<style type="text/css">
+	#video iframe{
+		width: 500px;
+		height: 390px;
+		margin-left: 15%;
+		padding-top: 5px;
+	}
+</style>
+<script type="text/javascript">
+	$(document).ready(function(){	
+		//cargar contenido por url
+		$("#update").focus();
+		$("#btn").click(function(){
+			var prueba = $("#update").val();
+			$("#embed").oembed(prueba);
+			//$('#video').replaceWith("<div id='video'><div id='embed'></div></div>");
+			$("#update").val('');
+		});
+	});
+</script>
+</head>
+<body>
+	<div id="contenedor-cabeza">
+		<div class="envoltura">
+			<a class="logo" href="../../" title="Inicio">Otro Espacio Web Practicas</a>
+			<nav>
+				<ul class="menu">
+					<li><a href="../../" title="Inicio">Inicio</a></li>
+					<li><a href="../../php/" title="PHP/MySQL">PHP/MySQL</a></li>
+					<li><a href="../../html5/" title="HTML5">HTML5</a></li>
+					<li><a class="actual" href="../" title="jQuery">jQuery</a></li>
+					<li><a href="../../prezi/" title="Prezi">Prezi</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	<div id="contenedor-cuerpo">
+		<div class="envoltura">
+			<h2>Carga de contenido por URL</h2>
+			<p>Copia la url de un contenido o recurso, sea vídeo, imagen, archivo de scribd, presentación de slideshare, vídeo en youtube o vimeo.</p>
+			<div>
+				<input type="text" id="update" placeholder="ej: http://vimeo.com/51458566" />
+				<input type="button" id="btn" value="Tomar" />
+			</div>
+			<div id="video">
+				<div id="embed"></div>
+			</div>
+			<a href="../" class="button glossy orange">Regresar</a>
+		</div>
+	</div>
+	<div id="contenedor-pie">
+		<div class="envoltura">
+			<span>&copy;Otro Espacio Web Practicas.</span>
+			<ul class="menu">
+				<li><a href="../../contacto.html" title="Contacto">Contacto</a></li>
+				<li><a href="../../desarrolladores.html" title="Creador">Creador</a></li>
+				<li><a href="../../mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="../../js/cufon-yui.js"></script>
+<script type="text/javascript" src="../../js/cufon-replace.js"></script>
+<script type="text/javascript" src="../../js/Bascula_400.font.js"></script>
+</html>
