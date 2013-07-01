@@ -5,20 +5,15 @@
 <title>Otro Espacio Web Practicas || PHP</title>
 <link rel="stylesheet" type="text/css" href="../../css/estilo.css" />
 <link rel="stylesheet" type="text/css" href="../../css/buttons.css" />
-<script type="text/javascript" src="jquery-1.10.0.min.js"></script>
-<script>
-	$(document).ready(function(){
-		//$("#scribd").hide();
-		$(window).load(function(){
-
-			$("#scribd").load("colecta_enlace.php #scribd", function(){
-				//$("#scribd").show();
-				var enlace = $("#scribd").text();
-				$("#enlace").val(enlace);
-			});
-		});
-	});
-</script>
+<style type="text/css">
+	iframe{
+		width: 650px;
+		display: block;
+		height: 450px;
+		border: none;
+		margin-left: 15%;
+	}
+</style>
 </head>
 <body>
 	<div id="contenedor-cabeza">
@@ -39,12 +34,14 @@
 		<div class="envoltura">
 			<h2>Cargar documento a scribd</h2>
 			<p>Usando este formulario podrás <strong>subir un documento de texto a scribd</strong> y obtener una visualización aquí mismo. Para lograrlo, he hecho uso de la <strong>API de scribd</strong> por medio de una clase en PHP, junto con un poco de <strong>jQuery</strong>.</p>
-			<div id="scribd"></div>
+			<!-- <div id="scribd"></div>
 			<input type="text" name="scribd" id="enlace" size="50" /><br /><br />
 			<form action="sube_scribd.php" method="post" enctype="multipart/form-data">
 				Su Archivo: <input name="userfile" type="file" id="file" />
 				<input type="submit" id="subir" value="Subir a Scribd" />
-			</form>
+			</form> -->
+			<!-- me toco usar iframe porque el servidor en mi arroba no me permite la carga de archivos... al parecer -->
+			<iframe src="http://www.otroespacioweb.com/subida_scribd/index.html"></iframe>
 			<a href="../" class="button glossy orange">Regresar</a>
 		</div>
 	</div>

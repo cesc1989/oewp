@@ -2,3 +2,5 @@
 *.html~
 *.css~
 *.js~
+*.md~
+*.gitignore~
