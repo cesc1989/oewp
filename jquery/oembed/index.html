@@ -8,11 +8,17 @@
 <script type="text/javascript" src="../jquery.min.js"></script>
 <script type="text/javascript" src="jquery.oembed.js"></script>
 <style type="text/css">
-	#video iframe{
-		width: 500px;
-		height: 390px;
-		margin-left: 15%;
+	#video iframe, #video object, #video img{
+		width: 720px;
+		height: 490px;
+		margin-left: 10%;
 		padding-top: 5px;
+	}
+	#panel{
+		margin-left: 30%;
+	}
+	input[type="text"]{
+		padding: 8px;
 	}
 </style>
 <script type="text/javascript">
@@ -21,8 +27,8 @@
 		$("#update").focus();
 		$("#btn").click(function(){
 			var prueba = $("#update").val();
+			$('#video').replaceWith("<div id='video'><div id='embed'></div></div>");
 			$("#embed").oembed(prueba);
-			//$('#video').replaceWith("<div id='video'><div id='embed'></div></div>");
 			$("#update").val('');
 		});
 	});
@@ -46,8 +52,8 @@
 	<div id="contenedor-cuerpo">
 		<div class="envoltura">
 			<h2>Carga de contenido por URL</h2>
-			<p>Copia la url de un contenido o recurso, sea vídeo, imagen, archivo de scribd, presentación de slideshare, vídeo en youtube o vimeo.</p>
-			<div>
+			<p>Copia la url de un contenido o recurso, sea <strong>vídeo</strong>, imagen, archivo de <strong>scribd</strong>, presentación de <strong>slideshare</strong>, vídeo en <strong>youtube o vimeo</strong>, presiona el botón y mira como se carga el contenido en tal y como sucede en facebook al pegar una url en la actualización de estado.</p>
+			<div id="panel">
 				<input type="text" id="update" placeholder="ej: http://vimeo.com/51458566" />
 				<input type="button" id="btn" value="Tomar" />
 			</div>
@@ -67,8 +73,8 @@
 			</ul>
 		</div>
 	</div>
-</body>
 <script type="text/javascript" src="../../js/cufon-yui.js"></script>
 <script type="text/javascript" src="../../js/cufon-replace.js"></script>
 <script type="text/javascript" src="../../js/Bascula_400.font.js"></script>
+</body>
 </html>
