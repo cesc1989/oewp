@@ -2,13 +2,16 @@
 <head>
 	<title>Inicio | Otro Espacio Web Practicas</title>
 	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="google-site-verification" content="5RW3UODqOUMUE7eKTwuAsF3h74Wbla0Hf47VivwP_KQ" />
 	<meta content="Otro Espacio Web Practicas" name="title" />
 	<meta name="author" content="Francisco Quintero" />
 	<meta name="description" content="" />
 	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="shortcut icon" href="imagenes/favicon.ico" />
-	<link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
 	<!--Google Analytics-->
 	<script type="text/javascript">
@@ -24,76 +27,122 @@
 	<!--Google Analytics-->
 </head>
 <body>
-	<div>
-		<div>
-			<a class="logo" href="index.html" title="Otro Espacio Web Practicas">Otro Espacio Web Practicas</a>
-			<nav>
-				<ul>
-					<li><a href="index.html" title="Inicio">Inicio</a></li>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="index.html" title="Otro Espacio Web Practicas">Otro Espacio Web Practicas</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse" id="collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="index.html" class="active" title="Inicio">Inicio</a></li>
 					<li><a href="php/" title="PHP/MySQL">PHP/MySQL</a></li>
 					<li><a href="html5/" title="HTML5">HTML5</a></li>
 					<li><a href="jquery/" title="jQuery">jQuery</a></li>
 					<li><a href="prezi/" title="Prezi">Prezi</a></li>
 				</ul>
-			</nav>
-		</div>
-	</div>
-	<div>
-		<div>
-				<img src="imagenes/prezi.jpg" />
-				<img src="imagenes/php.jpg" />
-				<img src="imagenes/html5.jpg" />
-				<img src="imagenes/jquery.png" />
-			<aside>
-				<div>
-					<h2>Demostraciones de Prezis</h2>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div id="carousel" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#carousel" data-slide-to="1"></li>
+			<li data-target="#carousel" data-slide-to="2"></li>
+			<li data-target="#carousel" data-slide-to="3"></li>
+		</ol>
+
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner">
+			
+			<!-- PREZI -->
+		  	<div class="item active">
+		  		<img src="imagenes/prezi.jpg" alt="Prezis" class="img-slider" />
+		  		<div class="carousel-caption">
+		  			<h2>Demostraciones de Prezis</h2>
 					<p>Considero que Prezi es una excelente herramienta. Comparto aquí algunas presentaciones que he hecho usando el servicio.</p>
-					<a href="prezi/">Ver algunas Prezis</a>
-				</div>
-				<div>
-					<h2>Pruebas con PHP & MySQL</h2>
+					<a href="prezi/" class="btn btn-lg btn-info">Ver algunas Prezis</a>
+		  		</div>
+		    </div>
+
+		    <!-- PHP -->
+		    <div class="item">
+		  		<img src="imagenes/php.jpg" alt="PHP" class="img-slider" />
+		  		<div class="carousel-caption">
+		  			<h2>Pruebas con PHP & MySQL</h2>
 					<p>Fue el primer lenguaje de servidor que aprendí, y casi siempre MySQL viene inherente a este. Dejo algunas cosas que hice con PHP y el motor de base de datos.</p>
-					<a href="php/">Ver creaciones con PHP & MySQL</a>
-				</div>
-				<div>
-					<h2>Probando HTML5</h2>
+					<a href="php/" class="btn btn-lg btn-info">Ver creaciones con PHP & MySQL</a>
+		  		</div>
+		    </div>
+
+		    <!-- jQuery -->
+		    <div class="item">
+		  		<img src="imagenes/jquery.png" alt="jquery" class="img-slider" />
+		  		<div class="carousel-caption">
+		  			<h2>Pruebas con jQuery</h2>
+					<p>Demostraciones de código usando la librería basada en JavaScript, jQuery.</p>
+					<a href="jquery/" class="btn btn-lg btn-info">Ver algunos jQueries</a>
+		  		</div>
+		    </div>
+
+		    <!-- HTML5 -->
+		    <div class="item">
+		  		<img src="imagenes/html5.jpg" alt="html" class="img-slider" />
+		  		<div class="carousel-caption">
+		  			<h2>Probando HTML5</h2>
 					<p>La más reciente versión del lenguaje de marcado para la creación de páginas web viene recargada. Acá dejo algunas cosas que he probado de la versión 5.</p>
-					<a href="html5/">Ver código usando HTML5</a>
-				</div>
-				<div>
-					<h2>Pruebas con jQuery</h2>
-					<p>Demostraciones de c&oacute;digo usando la librería basada en JavaScript, jQuery.</p>
-					<a href="jquery/">Ver algunos jQueries</a>
-				</div>
-			</aside>
+					<a href="html5/" class="btn btn-lg btn-info">Ver código usando HTML5</a>
+		  		</div>
+		    </div>
+
+
 		</div>
+
 	</div>
-	<div>
-		<div>
-		<div>
-			<div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
 				<h1>Sitio de muestra</h1>
 				<p>Este sitio se utiliza para mostrar pruebas que hago en programación web. Encontrarás ejemplos usando <b>PHP</b> junto 
 				con el gestor de base de datos <b>MySQL</b>. Ejemplos usando la nueva versión de <u>HTML</u>, el <b>HTML5</b>. Usos de la librería <u>JavaScript</u>, <b>jQuery</b>. 
 				En todo el sitio se aplican estilos de la nueva versión de <u>CSS</u>, <b>CSS3</b>, tomando como ejemplos los <i>bordes, sombras, degradados</i> y otros más.</p>
 			</div>
-			<div>
+
+			<div class="col-md-4">
 				<h2>Otro Espacio Web Practicas?</h2>
-				<p>Esta web hace parte del grupo de sitios <b>Otro Espacio Web</b> conformado por <a href="http://otroespacioblog.wordpress.com" title="Otro Espacio Web Blog" target="_blank">el blog</a> y 
-				<a href="http://www.otroespacioweb.com" title="Otro Espacio Web" target="_blank">el sitio oficial</a> los cuales fueron creados y son administrados por <a href="desarrolladores.html" title="Creador">Francisco Quintero</a>.</p>
+				<p>Esta web hace parte del grupo de sitios <b>Otro Espacio Web</b> conformado por <a href="http://otroespacioblog.wordpress.com" title="Otro Espacio Web Blog" target="_blank">el blog</a>, los cuales fueron creados y son administrados por <a href="desarrolladores.html" title="Creador">Francisco Quintero</a>.</p>
 			</div>
 		</div>
+	</div>
+
+	<div class="container footer">
+		<div class="row">
+			<div class="col-md-4">
+				<span>&copy;Otro Espacio Web Practicas.</span>
+			</div>
+			<div class="col-md-6">
+				<ul>
+					<li><a href="contacto.html" title="Contacto">Contacto</a></li>
+					<li><a href="desarrolladores.html" title="Creador">Creador</a></li>
+					<li><a href="mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div>
-		<div>
-			<span>&copy;Otro Espacio Web Practicas.</span>
-			<ul class="menu">
-				<li><a href="contacto.html" title="Contacto">Contacto</a></li>
-				<li><a href="desarrolladores.html" title="Creador">Creador</a></li>
-				<li><a href="mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
-			</ul>
-		</div>
-	</div>
+				
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
