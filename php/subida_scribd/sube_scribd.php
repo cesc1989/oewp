@@ -19,11 +19,11 @@
 		$enlace_pegable = $url_scribd.$data[doc_id];
 		$_SESSION['scribd'] = $enlace_pegable;
 
-		//print "<div id=prueba>".$_SESSION['scribd']."</div>";
+		print "<div id=prueba>".$_SESSION['scribd']."</div>";
 
-		echo '<head>
-				<meta http-equiv=refresh content=0;colecta_enlace.html>
-			</head>';
+		 echo '<head>
+				 <meta http-equiv=refresh content=0;colecta_enlace.php>
+			 </head>';
 	}else{
 		echo "Error. Objeto scribd no creado.";
 	}
