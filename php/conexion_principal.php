@@ -6,5 +6,5 @@
 	$cone=mysql_connect($host,$user,$pass);
 	if(!$cone){
 		die('No se pudo conectar con el servidor '.mysql_error());
-	}else{echo"conxion establecida";}
+	}
 ?>
