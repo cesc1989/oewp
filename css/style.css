@@ -11,6 +11,11 @@
 	height: 420px !important;
 }
 
+.carousel-caption{
+	background-color: rgba(0,0,0,0.8);
+	border-radius: 3px;
+}
+
 
 .footer{
 	padding-top: 30px;
