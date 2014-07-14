@@ -1,11 +1,10 @@
-$(function()
-{
+$(function(){
+	
 	var letras=["a","b","c","d","e","f",0,1,2,3,4,5,6,7,8,9];
-	$("div#contenedor-cuerpo .envoltura div").each(function(i)
-	{
+	
+	$("div#cuadros div").each(function(i){
 		//Este ciclo es para crear 6 diferentes caracteres para formar un color hexadecimal.
-		for(var inc=1;inc<=6;inc++)
-		{
+		for(var inc=1;inc<=6;inc++){
 			//Estas variables a-f son para almacenar un valor aleatorio diferente
 			var a=aleatoria(0,16);
 			var c=aleatoria(0,16);
@@ -28,14 +27,15 @@ $(function()
 			var colorentrada=esa+esa1+esa2+esa3+esa4+esa5;
 			var colorsalida=esa5+esa2+esa4+esa+esa1+esa3;
 		}
-	$(this).mouseenter(function(evento){$(this).css("background-color","#"+colorentrada)});
-	$(this).mouseleave(function(evento){$(this).css("background-color","#"+colorsalida)});
+	
+		$(this).mouseenter(function(evento){$(this).css("background-color","#"+colorentrada)});
+		$(this).mouseleave(function(evento){$(this).css("background-color","#"+colorsalida)});
 	});
-	function aleatoria(infe,supe)
-	{
+	
+	function aleatoria(infe,supe){
 		numpo=supe-infe;
 		var aleat=Math.random()*numpo;
 		aleat=Math.floor(aleat);
 		return aleat;
 	}
-})
+});

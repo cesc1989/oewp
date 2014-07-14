@@ -1,84 +1,121 @@
 <!DOCTYPE html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Otro Espacio Web Practicas || jQuery</title>
-<link rel="stylesheet" type="text/css" href="../../css/estilo.css" />
-<link rel="stylesheet" type="text/css" href="../../css/buttons.css" />
-<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
-<style type="text/css">
-	#loader{
-		width: auto;
-		height: auto;
-		margin-left: 25%;
-		padding: 10px;
-	}
-</style>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#url").focus();
-		$('#attach').click(function(){
-			/*alert($("#url").val());*/
-			if(!isValidURL($('#url').val())){
-				alert('Please enter a valid url.');
-				return false;
-			}else{
-				$.post("fetch.php?url="+$('#url').val(),{
-				}, function(response){
-					$('#loader').html($(response).fadeIn('slow'));
-				});
-			}
-		});
-	});
-	var isValidURL = function(url){
-		var RegExp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
-		if(RegExp.test(url)){
-			return true;
-		}else{
-			return false;
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Cargar Recurso desde una URL | Otro Espacio Web Prácticas</title>
+	<meta content="Otro Espacio Web Prácticas" name="title" />
+	<meta name="author" content="Francisco Quintero" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="../../imagenes/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+	<style type="text/css">
+		#loader{
+			width: auto;
+			height: auto;
+			padding: 10px;
 		}
-	}
-</script>
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#url").focus();
+			$('#attach').click(function(){
+				/*alert($("#url").val());*/
+				if(!isValidURL($('#url').val())){
+					alert('Please enter a valid url.');
+					return false;
+				}else{
+					$.post("fetch.php?url="+$('#url').val(),{
+					}, function(response){
+						$('#loader').html($(response).fadeIn('slow'));
+					});
+				}
+			});
+		});
+		var isValidURL = function(url){
+			var RegExp = /(ftp|http|https):\/\/(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/;
+			if(RegExp.test(url)){
+				return true;
+			}else{
+				return false;
+			}
+		}
+	</script>
 </head>
 <body>
-	<div id="contenedor-cabeza">
-		<div class="envoltura">
-			<a class="logo" href="../../" title="Inicio">Otro Espacio Web Practicas</a>
-			<nav>
-				<ul class="menu">
-					<li><a href="../../" title="Inicio">Inicio</a></li>
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapse">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="../../index.html" title="Otro Espacio Web Prácticas">Otro Espacio Web Prácticas</a>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+    		<div class="collapse navbar-collapse" id="collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="../../index.html" class="active" title="Inicio">Inicio</a></li>
 					<li><a href="../../php/" title="PHP/MySQL">PHP/MySQL</a></li>
 					<li><a href="../../html5/" title="HTML5">HTML5</a></li>
-					<li><a class="actual" href="../" title="jQuery">jQuery</a></li>
+					<li><a href="../../jquery/" title="jQuery">jQuery</a></li>
 					<li><a href="../../prezi/" title="Prezi">Prezi</a></li>
 				</ul>
-			</nav>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h1>Cargar recurso vía enlace</h1>
+				<p>Así como en facebook, copias un <strong>enlace de un vídeo de YouTube</strong> y lo pegas en el campo para actualizar estado, y obtienes una vista miniatura del recurso, es la característica que ofrece esta práctica a continuación.</p>
+				<h3>Notas</h3>
+				<p>Solo funciona con vídeos de <strong>YouTube, Vimeo, Metacafe, Google Video y Dailymotion</strong>.</p>
+				<p>Si el enlace tiene el <em>https</em>, elimina la <strong>s</strong> al final para que funcione el código.</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<input class="form-control" type="text" name="url" size="40" id="url" />
+				<input class="btn btn-success" type="button" name="attach" value="Consultar" id="attach" />
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div id="loader"></div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-md-12">
+				<a href="../index.html" class="btn btn-warning btn-lg">Regresar</a>
+			</div>
 		</div>
 	</div>
-	<div id="contenedor-cuerpo">
-		<div class="envoltura">
-			<h1>Cargar recurso via enlace</h1>
-			<p>Así como en facebook, copias un <strong>enlace de un vídeo de YouTube</strong> y lo pegas en el campo para actualizar estado, y obtienes una vista miniatura del recurso, es la característica que ofrece esta práctica a continuación.</p>
-			<h3>Notas</h3>
-			<p>Solo funciona con vídeos de <strong>YouTube, Vimeo, Metacafe, Google Video y Dailymotion</strong>.</p>
-			<p>Si el enlace tiene el <em>https</em>, elimina la <strong>s</strong> al final para que funcione el código.</p>
-			<input type="text" name="url" size="40" id="url" />
-			<input type="button" name="attach" value="Consultar" id="attach" />
-			<div id="loader"></div>
-			<a href="../index.html" class="button glossy green">Regresar</a>
+	
+	<div class="container footer">
+		<div class="row">
+			<div class="col-md-4">
+				<span>&copy;Otro Espacio Web Prácticas.</span>
+			</div>
+			<div class="col-md-6">
+				<ul>
+					<li><a href="../../contacto.html" title="Contacto">Contacto</a></li>
+					<li><a href="../../desarrolladores.html" title="Creador">Creador</a></li>
+					<li><a href="../../mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div id="contenedor-pie">
-		<div class="envoltura">
-			<span>&copy;Otro Espacio Web Practicas.</span>
-			<ul class="menu">
-				<li><a href="../../contacto.html" title="Contacto">Contacto</a></li>
-				<li><a href="../../desarrolladores.html" title="Creador">Creador</a></li>
-				<li><a href="../../mapa-sitio.html" title="Mapa del sitio">Mapa del sitio</a></li>
-			</ul>
-		</div>
-	</div>
-<script type="text/javascript" src="../../js/cufon-yui.js"></script>
-<script type="text/javascript" src="../../js/cufon-replace.js"></script>
-<script type="text/javascript" src="../../js/Bascula_400.font.js"></script>
+				
+	<script type="text/javascript" src="../../js/bootstrap.min.js"></script>	
 </body>
 </html>
