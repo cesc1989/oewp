@@ -1,51 +1,39 @@
 //con esta funcion obtengo el lienzo del elemento canvas para poder dibujar en el
-function cargaContextoCanvas(idCanvas)
-{
+function cargaContextoCanvas(idCanvas){
+	
 	var elemento=document.getElementById(idCanvas);
-	if(elemento && elemento.getContext)
-	{
+	if(elemento && elemento.getContext){
 		var contexto=elemento.getContext('2d');
-		if(contexto)
-		{
+		if(contexto){
 			return contexto;
 		}
 	}
 	return FALSE;
 }
+
 //una vez cargada toda la pagina procedo a llamar la funcion para obtener el lienzo y dibujar en el
-window.onload=function()
-{
+window.onload=function(){
+	
 	var contexto=cargaContextoCanvas('micanvas');
-	if(contexto)
-	{
+	if(contexto){
 		var x=0;
 		var y=0;
 		var i2=0;
 		var alternaColor="no";
-		for(var i=0;i<=7;i++)
-		{
-			while(i2<=7 && x<=400)
-			{
+		
+		for(var i=0;i<=7;i++){
+			while(i2<=7 && x<=400){
 				//alternar los colores en cada linea de cuadros
-				if(alternaColor=="no")
-				{
-					if(i2%2==0)
-					{
+				if(alternaColor=="no"){
+					if(i2%2==0){
 						contexto.fillStyle="#fff";
-					}
-					else
-					{
+					}else{
 						contexto.fillStyle="#000";
 					}
-				}
-				else
-				{
-					if(i2%2!=0)
-					{
+				}else{
+					if(i2%2!=0){
 						contexto.fillStyle="#fff";
-					}
-					else
-					{
+					}else{
 						contexto.fillStyle="#000";
 					}
 				}
@@ -56,12 +44,9 @@ window.onload=function()
 				i2++;
 			}
 			//con la variable alternaColor controlo que se alternen los colores de los cuadros del tablero.
-			if(alternaColor=="no")
-			{
+			if(alternaColor=="no"){
 				alternaColor="si";
-			}
-			else
-			{
+			}else{
 				alternaColor="no";
 			}
 			//inicializo las variables para que repitan la linea de cuadros
