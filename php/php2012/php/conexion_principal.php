@@ -8,6 +8,6 @@ if(!$cone)
 {
  die('No se pudo conectar con el servidor '.mysql_error());
 }else{
-	echo "se conecto";
+	// echo "se conecto";
 }
 ?>
